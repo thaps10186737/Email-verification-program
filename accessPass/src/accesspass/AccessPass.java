@@ -17,14 +17,16 @@ public class AccessPass {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     
+       //Scanner object
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter your email address");
         String pass;
         pass = scan.nextLine();
-        
+       
+        //Calling method getComplexity to validate input complexity
      getComplexity(getChar(pass), getCaps(pass), getChars(pass), Address(pass));   
     }
+    //Method getComplexity
 public static boolean getComplexity(boolean c, boolean C, boolean ch, boolean Addr){
 boolean result = false;    
 
@@ -39,7 +41,7 @@ else{result = false;
 }
 return result;
 }    
-    
+    //Method getChar, checks if a particular character is present on password
   public static boolean getChar(String pass){
   boolean result = false;
   
@@ -53,7 +55,8 @@ return result;
  }
   return result;
   } 
-  
+    
+  //Method getCaps, checks if the password has Uppercase
   public static boolean getCaps(String pass){
   boolean result = false;
   
@@ -66,6 +69,8 @@ return result;
   }
   return result;
   }
+  
+    //Method getChars, checks if the password has "."
   public static boolean getChars(String pass){
   boolean result = false;
   
@@ -78,6 +83,8 @@ return result;
   }
   return result;
   }
+    
+    // Method Address checks if user entry is an email address
   public static boolean Address(String pass){
   
   boolean result = false;    
